@@ -8,22 +8,25 @@
     <link rel="icon" href="favicon.ico" />
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/custom.css" />
-    <script src="/assets/scripts/jquery.js"></script>
     <script>
-      function dtime_nums(d) {
-        var now = new Date();
-        now.setDate(now.getDate() + d);
-        document.write(
-          (now.getDate() < 10 ? '0' : '') +
-            now.getDate() +
-            '.' +
-            (now.getMonth() + 1 < 10 ? '0' : '') +
-            (now.getMonth() + 1) +
-            '.' +
-            now.getFullYear()
-        );
-      }
+        function dtime_nums(d) {
+            var now = new Date();
+            now.setDate(now.getDate() + d);
+            var day = now.getDate().toString().padStart(2, '0');
+            var month = (now.getMonth() + 1).toString().padStart(2, '0');
+            var year = now.getFullYear();
+            return `${day}.${month}.${year}`;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        var dateElements = document.querySelectorAll('.ct_noteditable.womanCom__date');
+        dateElements.forEach(function (el) {
+        var offset = parseInt(el.getAttribute('data-offset')) || 0;
+        el.textContent = dtime_nums(offset);
+        });
+    });
     </script>
+
   </head>
 
   <body>
@@ -3089,10 +3092,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Katarina Klaić&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-1, true);
-                  </script>
+                Katarina Klaić&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-1">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -3379,10 +3379,7 @@
             <div class="womanCom__info">
               <p class="womanCom__name">
                 Martina Belošević&nbsp;<span
-                  class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-2, true);
-                  </script>
+                  class="ct_noteditable womanCom__date" data-offset="-2">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4073,10 +4070,7 @@
             <div class="womanCom__info">
               <p class="womanCom__name">
                 Miroslav Jelušić&nbsp;<span
-                  class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-2, true);
-                  </script>
+                  class="ct_noteditable womanCom__date" data-offset="-2">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4167,10 +4161,7 @@
             <div class="womanCom__info">
               <p class="womanCom__name">
                 Kristina Lipoščak&nbsp;<span
-                  class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-2, true);
-                  </script>
+                  class="ct_noteditable womanCom__date" data-offset="-2">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4270,10 +4261,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Ena Štrbac&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-2, true);
-                  </script>
+                Ena Štrbac&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-2">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4364,10 +4352,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Leonarda Benko&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-2, true);
-                  </script>
+                Leonarda Benko&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-2">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4469,10 +4454,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Daria Rudman&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-2, true);
-                  </script>
+                Daria Rudman&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-2">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4576,10 +4558,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Vanja Vrebac&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-2, true);
-                  </script>
+                Vanja Vrebac&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-2">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4671,10 +4650,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Anita Vrdoljak&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                Anita Vrdoljak&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4765,10 +4741,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Anja Balaban&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                Anja Balaban&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -4879,10 +4852,7 @@
               </div>
               <div class="womanCom__info">
                 <p class="womanCom__name">
-                  Ena Bočina&nbsp;<span class="ct_noteditable womanCom__date">
-                    <script>
-                      dtime_nums(-3, true);
-                    </script>
+                  Ena Bočina&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-3">
                   </span>
                 </p>
                 <p class="womanCom__comment">
@@ -4978,10 +4948,7 @@
               <div class="womanCom__info">
                 <p class="womanCom__name">
                   Branka Brulja&nbsp;<span
-                    class="ct_noteditable womanCom__date">
-                    <script>
-                      dtime_nums(-3, true);
-                    </script>
+                    class="ct_noteditable womanCom__date" data-offset="-3">
                   </span>
                 </p>
                 <p class="womanCom__comment">
@@ -5075,10 +5042,7 @@
               <div class="womanCom__info">
                 <p class="womanCom__name">
                   Miroslava Ivanova&nbsp;<span
-                    class="ct_noteditable womanCom__date">
-                    <script>
-                      dtime_nums(-3, true);
-                    </script>
+                    class="ct_noteditable womanCom__date" data-offset="-3">
                   </span>
                 </p>
                 <p class="womanCom__comment">
@@ -5188,10 +5152,7 @@
               <div class="womanCom__info">
                 <p class="womanCom__name">
                   Anđela Grubić&nbsp;<span
-                    class="ct_noteditable womanCom__date">
-                    <script>
-                      dtime_nums(-3, true);
-                    </script>
+                    class="ct_noteditable womanCom__date" data-offset="-3">
                   </span>
                 </p>
                 <p class="womanCom__comment">
@@ -5295,10 +5256,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Jasna Horvatić&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                Jasna Horvatić&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -5388,10 +5346,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Dora Blašković&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                Dora Blašković&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -5482,10 +5437,7 @@
             <div class="womanCom__info">
               <p class="womanCom__name">
                 Gabrijela Stojčević&nbsp;<span
-                  class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                  class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -5589,10 +5541,7 @@
             </div>
             <div class="womanCom__info">
               <p class="womanCom__name">
-                Lea Buzov&nbsp;<span class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                Lea Buzov&nbsp;<span class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -5684,10 +5633,7 @@
             <div class="womanCom__info">
               <p class="womanCom__name">
                 Stela Drašković&nbsp;<span
-                  class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                  class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -5792,10 +5738,7 @@
             <div class="womanCom__info">
               <p class="womanCom__name">
                 Danica Blažeković&nbsp;<span
-                  class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                  class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -5907,10 +5850,7 @@
             <div class="womanCom__info">
               <p class="womanCom__name">
                 Suzana Belobrajdić&nbsp;<span
-                  class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                  class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
@@ -6010,10 +5950,7 @@
             <div class="womanCom__info">
               <p class="womanCom__name">
                 Anđela Glavinić&nbsp;<span
-                  class="ct_noteditable womanCom__date">
-                  <script>
-                    dtime_nums(-3, true);
-                  </script>
+                  class="ct_noteditable womanCom__date" data-offset="-3">
                 </span>
               </p>
               <p class="womanCom__comment">
