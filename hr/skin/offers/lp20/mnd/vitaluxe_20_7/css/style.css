@@ -3628,3 +3628,7 @@ ul li.listCircle::before {
         transform: rotate(360deg)
     }
 }
+
+.ctContent {
+  max-width: 1025px;
+}
