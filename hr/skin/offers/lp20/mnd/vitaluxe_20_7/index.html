@@ -19,12 +19,12 @@
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-        var dateElements = document.querySelectorAll('.ct_noteditable.womanCom__date');
+        const dateElements = document.querySelectorAll('.ct_noteditable[data-offset]');
         dateElements.forEach(function (el) {
-        var offset = parseInt(el.getAttribute('data-offset')) || 0;
-        el.textContent = dtime_nums(offset);
+            const offset = parseInt(el.getAttribute('data-offset')) || 0;
+            el.textContent = dtime_nums(offset);
+            });
         });
-    });
     </script>
 
   </head>
